@@ -10,6 +10,7 @@ public class Main {
         player.getInventory().getItem(lightbringer);
         player.getInventory().equipItem(lightbringer);
         System.out.println(player.getInventory().inventory());
-        System.out.println(player.getInventory().getWeapon());
+        System.out.println(player.getInventory().inventory(0).getName());
+        System.out.println(player.getInventory().getWeapon().getName());
     }
 }

@@ -1,11 +1,17 @@
 package com.company;
-
 import java.util.ArrayList;
 
 public class Inventory {
     private int size;
     private ArrayList<Item> slots;
-    private Item weapon;
+    private Item rhand;
+    private Item lhand;
+    private Item head;
+    private Item chest;
+    private Item gloves;
+    private Item legs;
+    private Item boots;
+
 
     public Inventory() {
         this.size = 20;
