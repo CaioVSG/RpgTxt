@@ -4,29 +4,29 @@ public class EntityAtributes {
     private int maxHealth;
     private int stamina;
     private int mana;
-    private int phisicalPower;
+    private int physicalPower;
     private int magicalDamage;
     private int atkSpeed;
     private int criticalChance;
     private int armor;
     private int magicalResistence;
     private int lifeSteal;
-    private int phisicalPenetration;
+    private int physicalPenetration;
     private int magicalPenetration;
 
     public EntityAtributes(String classe) {
-        if (classe == "warrior") {
+        if (classe.equals("warrior")) {
             this.maxHealth = 500;
             this.stamina = 300;
             this.mana = 50;
-            this.phisicalPower = 60;
+            this.physicalPower = 60;
             this.magicalDamage = 0;
             this.atkSpeed = 1;
             this.criticalChance = 5;
             this.armor = 25;
             this.magicalResistence = 30;
             this.lifeSteal = 0;
-            this.phisicalPenetration = 0;
+            this.physicalPenetration = 0;
             this.magicalPenetration = 0;
         }
     }
@@ -56,12 +56,12 @@ public class EntityAtributes {
         this.mana = mana;
     }
 
-    public int getPhisicalPower() {
-        return phisicalPower;
+    public int getPhysicalPower() {
+        return physicalPower;
     }
 
     public void setPhisicalPower(int phisicalPower) {
-        this.phisicalPower = phisicalPower;
+        this.physicalPower = phisicalPower;
     }
 
     public int getMagicalDamage() {
@@ -112,12 +112,12 @@ public class EntityAtributes {
         this.lifeSteal = lifeSteal;
     }
 
-    public int getPhisicalPenetration() {
-        return phisicalPenetration;
+    public int getPhysicalPenetration() {
+        return physicalPenetration;
     }
 
-    public void setPhisicalPenetration(int phisicalPenetration) {
-        this.phisicalPenetration = phisicalPenetration;
+    public void setPhysicalPenetration(int physicalPenetration) {
+        this.physicalPenetration = physicalPenetration;
     }
 
     public int getMagicalPenetration() {
