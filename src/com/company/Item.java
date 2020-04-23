@@ -1,21 +1,11 @@
 package com.company;
 
-public class Item {
-    private String name;
-    private String description;
-    private String type;
-    private Effect effect;
-    private Enchantment enchantment;
-    private boolean equipable;
-
-    public Item(String name) {
-        if (name == "Lightbringer") {
-            this.name = "LightBringer";
-            this.description = "A espada que trará a luz sobre seus inimigos";
-            this.type = "weapon";
-            this.equipable = true;
-        }
-    }
+public abstract class Item {
+    protected String name;
+    protected String description;
+    protected String type;
+    protected boolean equiped;
+    protected int value;
 
     public String getName() {
         return name;
@@ -29,19 +19,15 @@ public class Item {
         return type;
     }
 
-    public Effect getEffect() {
-        return effect;
+    public int getValue() {
+        return value;
     }
 
-    public Enchantment getEnchantment() {
-        return enchantment;
+    public boolean isEquiped() {
+        return equiped;
     }
 
-    public boolean isEquipable() {
-        return equipable;
-    }
-
-    public void setEnchantment(Enchantment enchantment) {
-        this.enchantment = enchantment;
+    public void setEquiped(boolean equiped) {
+        this.equiped = equiped;
     }
 }

@@ -15,10 +15,9 @@ public class Inventory {
 
     public Inventory() {
         this.size = 20;
-        this.weapon = null;
         this.slots = new ArrayList<Item>();
     }
-    public boolean getItem(Item item){
+    public boolean pickItem(Item item){
         if(this.slots.size() < size){
             this.slots.add(item);
             return true;
@@ -27,14 +26,27 @@ public class Inventory {
             return false;
         }
     }
-    public void equipItem(Item item) {
-        if (item.isEquipable()) {
-            if (item.getType().equals("weapon")){
-                this.weapon = item;
-            }
+    public boolean equipItem(Item item) {
+        switch (item.type) {
+            case "helmet":
+                head = item;
+                return true;
         }
+        return false;
     }
-    public Item getWeapon() {return weapon;}
+    public boolean equipWeapon(Item item,String hand){
+        if (hand == "right") {
+            rhand = item;
+            item.setEquiped(true);
+            return true;
+        }else if (hand == "left"){
+            lhand = item;
+            item.setEquiped(true);
+            return true;
+        }
+        return false;
+    }
+
     public ArrayList inventory() {return slots;}
     public Item inventory(int n) {return slots.get(n);}
 }
